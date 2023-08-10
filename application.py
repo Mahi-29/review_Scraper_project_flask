@@ -3,7 +3,6 @@ from flask_cors import CORS,cross_origin
 from bs4 import BeautifulSoup
 from urllib.request import urlopen as uReq
 import logging
-import pymongo
 import requests
 import pandas as pd
 logging.basicConfig(filename="scrapper.log" , level=logging.INFO)
