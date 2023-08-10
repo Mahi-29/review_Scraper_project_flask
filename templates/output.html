@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Table with Flask</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/output.css') }}">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Flipkart Product Reviews</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>sr.no</th>
+          <th>Name</th>
+          <th>Title</th>
+          <th>Review</th>
+          <th>Rating</th>
+        </tr>
+      </thead>
+      <tbody>
+            <tbody>
+                {%for review in data %}
+                <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{review.customer_name}}</td>
+                <td>{{review.title}}</td>
+                <td>{{review.review}}</td>
+                <td>{{review.rating}}</td>
+                </tr>
+                {%endfor%}
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+      </div>
+    </body>
+    
+    </html>
