@@ -1,11 +1,11 @@
 from flask import Flask, request, redirect, render_template, jsonify
 from flask_cors import CORS,cross_origin
 from bs4 import BeautifulSoup
-from urllib.request import urlopen as uReq
-import logging
+# from urllib.request import urlopen as uReq
+# import logging
 import requests
 import pandas as pd
-logging.basicConfig(filename="scrapper.log" , level=logging.INFO)
+# logging.basicConfig(filename="scrapper.log" , level=logging.INFO)
 
 application = Flask(__name__)
 app=application
@@ -42,7 +42,7 @@ def fetch_reviews():
                         
                                         })
                 except Exception as e:
-                    logging.error(e)
+                    # logging.error(e)
                     continue
             
         df=pd.DataFrame(reviews_all)
@@ -50,7 +50,7 @@ def fetch_reviews():
         df.to_csv('reviews.csv')
         return render_template('output.html',data=reviews_all)
     except Exception as e:
-            logging.info(e)
+            # logging.info(e)
             return 'something is wrong'
 
 @app.route('/view',methods=['GET'])
