@@ -7,7 +7,7 @@ Welcome to our Flask web application repository! This application allows you to 
 - [Getting Started](#getting-started)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Hosted App](#Hosted-App)
+- [Hosted App](#hosted-app)
 
 ## Getting Started
 
